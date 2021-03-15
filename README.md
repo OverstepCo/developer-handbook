@@ -324,35 +324,44 @@ Widget build() {
 
 ```
 |- lib
-    |- components
-        |- component_1.dart
-        |- component_2.dart
+    |- style
+        |- style.dart (Library file)
+        |- button.dart (example)
+        |- input_field.dart (example)
     |- api_1
-        |- api_1.dart
-    |- library_1
-        |- library_1.dart
-        |- lib_component_1.dart
-        |- lib_component_2.dart
+        |- api_1.dart (Single-file Library)
+    |- api_2
+        |- api_2.dart (Multi-file Library)
+        |- api_component_1.dart
+        |- api_component_2.dart
     |- pages
         |- page_1
-            |- page_1.dart
+            |- page_1.dart (Library)
             |- components
-                |- component_1.dart
-                |- component_2.dart
+                |- component_1.dart (Library part)
+                |- component_2.dart (Library part)
     |- assets
         |- fonts
         |- images
 ```
 
+### Style
+
+This is where the individual elements of the app are collected into a library for a single import using an [Export Library](#method-exports). `style.dart` is the library that exports the visual elements. It also holds the `Style` class which contains constants for the app such as padding and border radii.
+
+### Libraries
+
+For any given library, the file intended for import (the library file) *must* match the name of the folder it sits in except for Libraries based in Pages, since those are not for export.
+
+Even if a library has only one file in it, it should still be placed in a folder.
+
+Most API libraries for the app should be parts-based. Over the life of the app, it is likely that these files will grow quite large so using the parts setup will allow fewer merge conflicts.
+
 ### Pages
 
-Each page should be a library with the components within its component folder as parts (see [Libraries Method One](#method-one-library-with-parts)). The items within the components folder should have no use outside of the page they are used in.
+Each page should be a library with the components within its component folder as parts (see [Library with Parts](#method-one-library-with-parts)). The items within the components folder should have no use outside of the page they are used in.
 
 If a component that was previously in a page-specific folder needs to be used in another location, move it to the global components library.
-
-### APIs
-
-
 
 # GitHub
 
