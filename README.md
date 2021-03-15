@@ -365,6 +365,13 @@ If a component that was previously in a page-specific folder needs to be used in
 
 # GitHub
 
+## Before Commits
+
+1. Remove excess print statements.
+2. Check/remove [TODOs](#todos-just-do-it).
+3. Ensure all code has been commented according to [standards](#comments).
+4. Organize imports. If using VS Code, you can press Ctrl + Shift + P or F1 to run 'Organize imports'.
+
 ## Commits
 
 ?> In order to keep the commit history clean and make collaboration more fluid, being thoughtful about when and what you commit can save a lot of time.
