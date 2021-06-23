@@ -397,6 +397,19 @@ Don't.
 
 Just don't.
 
+# Starting from a Clean Install
+
+1. Install Git.
+   - https://git-scm.com/downloads
+2. Install Flutter (follow all steps until "Windows setup").
+   - https://flutter.dev/docs/get-started/install
+3. If on Windows, install the Google USB driver for Android debugging.
+   - https://developer.android.com/studio/run/win-usb
+4. Install VS Code (follow all steps).
+   - https://flutter.dev/docs/get-started/editor?tab=vscode
+5. Download and save the [debug and release signing files](#) to somewhere you won't lose.
+6. Edit your system environment variables to add the key `signing_keys` with the value of the directory that contains the files you downloaded.
+
 # Helpful links
 
 - [Firestore Best Practices](https://firebase.google.com/docs/firestore/best-practices)
