@@ -407,8 +407,29 @@ Just don't.
    - https://developer.android.com/studio/run/win-usb
 4. Install VS Code (follow all steps).
    - https://flutter.dev/docs/get-started/editor?tab=vscode
-5. Download and save the [debug and release signing files](#) to somewhere you won't lose.
+5. Download and save the [debug and release signing files](#) to somewhere you won't lose or move.
 6. Edit your system environment variables to add the key `signing_keys` with the value of the directory that contains the files you downloaded.
+
+# Full New Project Setup
+
+1. Follow the instructions on the [Flutter Project Template](https://github.com/OverstepCo/flutter_project_template) for a new project.
+2. If Firebase is not required, stop here.
+3. Create a Firebase project on [Firebase](https://console.firebase.google.com). If you have multiple Google accounts and your Overstep email is not your default, you will need to make sure it shows the correct profile the top right.
+4. Give the project a name.
+5. Set the parent organization to `reddlegend.com`.
+6. Do ***not*** enable Google Analytics.
+7. Once it's done creating the project, you should find yourself on the overview page. Select iOS or Android to add to the app. You'll ultimately do both.
+8. For iOS:
+   1. Fill out the `iOS Bundle ID` field with the same bundle ID you set in the [Flutter Project Template](https://github.com/OverstepCo/flutter_project_template) steps.
+   2. Save `GoogleService-Info.plist` to `/ios/Runner/` in the Flutter project files.
+   3. Add that file to all targets in Xcode. MacOS is required for this step.
+9. For Android:
+   1. Fill out the `Android package name` field with the same package name you set in the [Flutter Project Template](https://github.com/OverstepCo/flutter_project_template) steps.
+   2. Add the official™ debug key so that people can access Firebase on their devices (see [Clean Install](#starting-from-a-clean-install) for debug key). If you miss entering it here, you can add it later under Project Settings.
+      1. If you don't know the exact values to enter for the debug keystore, go to where you saved the debug/release files in a terminal/command prompt. Enter the command `keytool -list -v -keystore debug-keystore.jks` and give the SHA1 value to Firebase.
+10. Go to Project Settings using the gear wheel at the top of the side panel on Firebase. Edit the public-facing name and support email.
+11. If Authentication is required, select it from the side panel. It should say something like "Get Started" to enable it. Enable the authentication methods relevant to the project.
+12. If Firestore is required, select it from the side panel. It should say something like "Create database" to enable it. Start it in test mode.
 
 # Helpful links
 
