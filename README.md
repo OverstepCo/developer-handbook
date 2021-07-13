@@ -407,8 +407,13 @@ Just don't.
    - https://developer.android.com/studio/run/win-usb
 4. Install VS Code (follow all steps).
    - https://flutter.dev/docs/get-started/editor?tab=vscode
-5. Download and save the [debug and release signing files](#) to somewhere you won't lose or move.
-6. Edit your system environment variables to add the key `signing_keys` with the value of the directory that contains the files you downloaded.
+5. Install extensions for VS Code
+   - Flutter (required)
+   - Dart (required)
+   - Code Spell Checker (useful for simple spelling mistakes)
+   - Dart Data Class Generator (useful for automating boilerplate)
+6. Download and save the [debug and release signing files](#) to somewhere you won't lose or move.
+7. Edit your system environment variables to add the key `signing_keys` with the value of the directory that contains the files you downloaded.
 
 # Full New Project Setup
 
