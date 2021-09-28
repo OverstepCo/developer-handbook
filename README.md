@@ -431,6 +431,7 @@ Just don't.
    - Code Spell Checker (useful for simple spelling mistakes)
    - Dart Data Class Generator (useful for automating boilerplate)
    - Prettier - Code formatter (multi-language code formatter)
+   - Better Comments - Comment Decorator (Helps make TODOs and other comments stand out)
 6. Download and save the [debug and release signing files](#) to somewhere you won't lose or move.
 7. Edit your system environment variables to add the key `signing_keys` with the value of the directory that contains the files you downloaded.
 
